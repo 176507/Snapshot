@@ -1,0 +1,311 @@
+/* Start Global Rules */
+:root {
+    --font-color-shine:#FFFFFF;
+    --margin:50px;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/*Start Header*/
+.header .container {
+    background-image: url(..//images/banner.jpg);
+    background-size: cover;
+    width: 1250px;
+    height: 455px;
+    position: relative;
+    margin-bottom :var(--margin);
+    
+}
+.header .container ::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 3%);
+ }
+.header .container .text{
+    position :relative ;
+    top:50%;
+    left :50%;
+    transform :translate(-50%,-50%);
+    text-align :center ;
+    width :fit-content ;
+    padding :20px;
+    
+}
+.header .container .text h2{
+    
+    color :var(--font-color-shine);
+    margin-bottom :20px;
+    font-size :50px;
+    animation-name: move;
+    animation-duration :5s;
+    font-weight :500;
+    
+}
+.header .container .text h3{
+    color: white;
+    margin-bottom: 30px;
+     animation-name: move;
+    animation-duration :5s;
+    font-weight :500;
+}
+.header .container .tools {
+  position: relative;
+ top: 50%;
+ left: 50%;
+  transform: translate(-50%,-50%);
+  text-align :center ;
+  width :fit-content ;
+  
+}
+ .header .container .tools button {
+   padding: 20px 30px;
+  color: floralwhite;
+  background: transparent;
+   cursor: pointer;
+   border-color: white;
+   animation-name: move;
+    animation-duration :5s;
+    font-weight :500;
+ }
+ @keyframes move{
+     0%{
+         color :transparent;
+         
+     }
+
+    50% {
+        color: var(--font-color-shine);
+       
+    }
+    100% {
+        color: var(--font-color-shine);
+       
+    }
+ }
+/*End  Header*/
+/*Start Gallary*/
+.gallary .container{
+    width :1000px;
+}
+.gallary .container .text{
+     font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+    width :fit-content ;
+    position :relative ;
+    top:50%;
+    left :50%;
+    transform :translate(-50%,-50%);
+}
+.gallary .container .image {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    grid-gap: 0;
+}
+    .gallary .container .image img {
+        width: 307px;
+        height: 307px;
+        
+    }
+    .gallary .container .image img:hover{
+        transform:scale(1.075);
+        
+    }
+    .gallary .container .tool button {
+        background-color: #19b5fe;
+        color: white;
+        padding: 10px 30px;
+        border-color: white;
+        border-radius: 6px;
+        font-size: 20px;
+        margin-top: 100px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        cursor :pointer ;
+    }
+/*End  Gallary*/
+/*Start info*/
+.info .container{
+    margin-top :var(--margin);
+    display:grid ;
+    grid-template-columns :repeat(auto-fill,minmax(400px,1fr));
+    margin-bottom :var(--margin);
+
+} 
+.info .container .phargraph{
+    background-color :#E6E6E6;
+    padding :20px;
+    display :flex ;
+    justify-content :center ;
+    align-items :center ;
+    flex-direction :column ;
+}
+.info .container .phargraph h2{
+    position :relative ;
+    left :-150px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+    .info .container .phargraph p {
+        text-align: justify-all;
+        color: black;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        font-weight :200;
+
+    }
+    .info .container .phargraph .icon {
+        position :relative ;
+        left: -160px;
+    }
+    .info .container .phargraph .icon i{
+        margin-left :5px;
+        color :#19b5fe;
+        width :30px;
+        height :30px;
+        cursor :pointer;
+    }
+.info .container .data{
+    background-color :#ddd;
+    padding :20px;
+}
+.info .container .data .text h2{
+     font-weight: 400;
+    margin-bottom: 50px;
+    margin-top: 30px
+}
+.info .container .data .fields .section-one{
+    position :relative ;
+    left :-60px;
+    display :flex ;
+    justify-content :space-between ;
+    align-items :center ;
+   margin-top :30px;
+    margin-bottom :40px;
+    flex-wrap :wrap;
+}
+.info .container .data .fields .section-one input{
+    padding: 10px;
+    border-radius: 6px;
+   width :200px;
+    border-color: rgba(25, 181, 254, 0.25);
+}
+.info .container .data .fields .section-one label{
+    position :relative ;
+    top:-30px;
+    left :60px;
+    margin-bottom :20px;
+}
+.info .container .data .fields .section-two{
+    position :relative ;
+    left :-60px;
+    margin-bottom :150px;
+    margin-top :100px;
+}
+.info .container .data .fields .section-two input {
+    width :400px;
+    height :170px;
+    border-color: rgba(25, 181, 254, 0.25);
+    
+}
+.info .container .data .fields .section-two label{
+    position :relative ;
+    top:-120px;
+    left :60px;
+    margin-bottom :20px;
+     
+}
+.info .container .data .tool button{
+    background-color: #19b5fe;
+    color: white;
+    padding: 10px 30px;
+    border-color: white;
+    border-radius: 6px;
+    font-size: 20px;
+    margin-top: 100px;
+   position :relative ;
+   top:-200px;
+    cursor: pointer;
+    width :200px;
+}
+/*End info*/
+/*Strat footer*/
+.footer{
+    display :flex ;
+    justify-content :center ;
+    align-items :center ;
+    margin-bottom :var(--margin);
+}
+.footer .text h6{
+    font-size :17px;
+    color :#BFBFBF;
+
+}
+.footer .text h6 a{
+    cursor :pointer ;
+    color :#19B5FE;
+    font-weight :400;
+}
+/*End footer*/
